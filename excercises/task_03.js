@@ -30,8 +30,6 @@ user_answer = ['g', 'r', 'm'];
 // ----------------------------------------------------------------------------------
 
 const solution = findDuplicateCharacters(example_string);
-console.log(solution);
-console.log(user_answer);
 
 if(JSON.stringify(new Set(solution)) === JSON.stringify(new Set(user_answer))){
     console.log(`Correct!`);
