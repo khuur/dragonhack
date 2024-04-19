@@ -33,8 +33,6 @@ user_solution = true;
 // ----------------------------------------------------------------------------------
 
 
-
-
 if (solution(expression) === user_solution) {
     console.log(`Correct!`);
 } else {

@@ -15,23 +15,21 @@ const N = 100;
 
 const {array_with_missing_number, missing_number} = generate_unsorted_array_with_missing_number(N);
 
-let missing_number_found = -1;
+let user_answer = -1;
 
 // ----------------------------------------------------------------------------------
 // YOUR CODE STARTS HERE
 // ----------------------------------------------------------------------------------
 
-console.log('Array with missing number: ', array_with_missing_number);
-
-missing_number_found = 54;
+user_answer = 54;
 
 // ----------------------------------------------------------------------------------
 // YOUR CODE ENDS HERE
 // ----------------------------------------------------------------------------------
 
 
-if(solution(missing_number_found, missing_number)){
-    console.log('The missing number is: ', missing_number_found);
+if(user_answer === missing_number){
+    console.log('The missing number is: ', user_answer);
 } else{
     console.log('Missing number that you found is incorrect. Please try again.');
 }
