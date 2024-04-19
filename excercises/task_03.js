@@ -31,7 +31,7 @@ user_answer = ['g', 'r', 'm'];
 
 const solution = findDuplicateCharacters(example_string);
 
-if(JSON.stringify(new Set(solution)) === JSON.stringify(new Set(user_answer))){
+if(solution.length === user_answer.length && solution.every(elem => user_answer.includes(elem))){
     console.log(`Correct!`);
 } else {
     console.log(`Incorrect!`);
