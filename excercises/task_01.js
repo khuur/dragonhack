@@ -2,35 +2,26 @@
     Find the Missing Number in an Array 
     Given an array of n-1 integers in the range from 1 to n, write a program to find the missing number.
     
+    Example: 
+        Array: [3, 2, 5, 1, 6, 7, 9, 8, 10]
+        Missing number: 4
+
     Solution could be: O(n)
 */
 const solution = require("../solutions/task_01_solution");
+const { generate_unsorted_array_with_missing_number} = require("../solutions/utils");
 
 const N = 100;
 
-const unsorted_array = [];
-
-for(let i = 1; i <= N; i++){
-    unsorted_array.push(i);
-}
-
-// shuffle the array
-
-for(let i = unsorted_array.length - 1; i > 0; i--){
-    const j = Math.floor(Math.random() * i);
-    const temp = unsorted_array[i];
-    unsorted_array[i] = unsorted_array[j];
-    unsorted_array[j] = temp;
-}
-
-const array_with_missing_number = unsorted_array.slice(0, unsorted_array.length - 1);
-const missing_number = unsorted_array[N - 1];
+const {array_with_missing_number, missing_number} = generate_unsorted_array_with_missing_number(N);
 
 let missing_number_found = -1;
 
 // ----------------------------------------------------------------------------------
 // YOUR CODE STARTS HERE
 // ----------------------------------------------------------------------------------
+
+console.log('Array with missing number: ', array_with_missing_number);
 
 missing_number_found = 54;
 
